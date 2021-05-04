@@ -1,0 +1,41 @@
+@font-face {
+    font-family: IRANSansWeb;
+    src: url("../font/IRANSansWeb(FaNum).woff") format("woff");
+    font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    font-family: IRANSansWeb, "Roboto", sans-serif;
+    color: #333;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.slide-bg{
+    z-index: -1;
+    width: 0;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+.slide-bg-animate{
+    animation: slide 0.5s 0s forwards
+}
+
+@keyframes slide {
+    100% {  width: 100vw; }
+}
+

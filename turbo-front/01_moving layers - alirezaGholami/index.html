@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moving layers</title>
+    <style type="text/css">
+        body {
+            font-family: "Ariel", sans-serif;
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .section1 {
+            background-color: aquamarine;
+            height: 100vh;
+        }
+
+        .section3 {
+            background-color: rgb(127, 197, 255);
+            height: 100vh;
+            /* margin-left: 150px; */
+        }
+
+        .section2 {
+            max-width: 800px;
+            min-height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            overflow: visible;
+            height: 550px;
+        }
+
+        .image {
+            position: absolute;
+        }
+
+        .layer1 {
+            left: 50%;
+            margin-left: -155px;
+        }
+
+        .layer2 {
+            width: 237px;
+            z-index: 2;
+            top: 115px;
+            left: 188px;
+            transition: all .5s;
+        }
+
+        .layer3 {
+            z-index: 3;
+            width: 280px;
+            left: 395px;
+            top: 121px;
+            transition: all .5s;
+        }
+
+        .layer4 {
+            top: 90px;
+            left: 50%;
+            margin-left: -350px;
+            z-index: 4;
+            width: 700px;
+            transition: all .5s;
+        }
+
+        .layer5 {
+            z-index: 5;
+            top: 318px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="section1">
+    </section>
+    <section class="section2">
+        <img class="image layer1" src="./images/image-layer1.svg" alt="">
+        <img data-xmove="-50px" class="image layer2" src="./images/image-layer2.svg" alt="">
+        <img data-xmove="150px" class="image layer3" src="./images/image-layer3.svg" alt="">
+        <img data-xmove="70px" class="image layer4" src="./images/image-layer4.svg" alt="">
+        <img class="image layer5" src="./images/image-layer5.svg" alt="">
+    </section>
+    <section class="section3">
+    </section>
+
+    <script defer type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+.slider {
+    display: flex;
+    height: 100%;
+    padding-bottom: 1rem;
+    .slider__side {
+        width: 3.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .line {
+            position: relative;
+            margin-top: 50px;
+            width: 3px;
+            height: 20rem;
+            background-color: rgb(158, 154, 154);
+            z-index: 10;
+            overflow: visible;
+
+            .indicator {
+                position: absolute;
+                width: 3px;
+                height: 10px;
+                background-color: rgb(98, 197, 204);
+                transition: transform 0.5s ease-out;
+            }
+        }
+    }
+    .slider__content {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .info {
+            overflow: hidden;
+            position: relative;
+            color: rgb(231, 235, 233);
+            direction: rtl;
+            width: 45%;
+            height: 100%;
+            padding-top: 5rem;
+            padding-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            .info-slide {
+                height: 450px;
+                position: absolute;
+                display: flex;
+                left: -1100px;
+                transition: all 0.8s ease-in;
+                transition-delay: 0.3s;
+
+                .info-slide0 {
+                    height: 100%;
+                    width: 200px;
+                }
+                .info-slide1 {
+                    width: 900px;
+                    height: 100%;
+                }
+            }
+            .info-slide--move {
+                transform: translateX(1000px);
+            }
+
+            .info__header {
+                font-size: 3rem;
+            }
+            .info__price {
+                font-size: 2rem;
+            }
+            .info__button {
+                flex-grow: 1;
+                .btn {
+                    width: 8.5rem;
+                    height: 2.5rem;
+                    background-color: rgb(98, 153, 185);
+                    color: #fff;
+                    border-radius: 4px;
+                    font: inherit;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    white-space: nowrap;
+                    border: none;
+                    .arrow {
+                        transition: all 0.2s ease-in;
+                        position: relative;
+                        top: 5px;
+                        margin-right: -20px;
+                        opacity: 0;
+                    }
+                    &:hover {
+                        .arrow {
+                            margin-right: 0;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            .info__specs {
+                display: flex;
+                list-style: none;
+                justify-content: space-around;
+                padding-right: 3rem;
+                padding-left: 3rem;
+                margin-top: auto;
+                transform: translateY(120px);
+                transition: transform 0.5s ease-in;
+            }
+            .info__specs--show {
+                transform: translateY(0);
+            }
+        }
+        .car {
+            display: flex;
+            align-items: flex-end;
+            width: 55%;
+            height: 100%;
+        }
+    }
+
+    .animate-car-enter {
+        animation: enter-car 0.7s 0s forwards;
+    }
+    .animate-car-exit {
+        animation: exit-car 0.5s 0s forwards;
+    }
+}
+
+@keyframes enter-car {
+    from {
+        transform: scale(0.5) translateX(-1550px) translateY(-1550px);
+    }
+    to {
+        transform: scale(1) translateX(0) translateY(0);
+    }
+}
+
+@keyframes exit-car {
+    from {
+        transform: scale(1) translateX(0) translateY(0);
+    }
+    to {
+        transform: scale(0.5) translateX(-1550px) translateY(-1550px);
+    }
+}

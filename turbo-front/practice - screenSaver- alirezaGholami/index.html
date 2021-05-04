@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screenSaver</title>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: "Ariel", sans-serif;
+            font-size: 18px;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+
+        #screenSaver {
+            display: none;
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #clock {
+		    transition: 0.3s all;
+            position: relative;
+            color: #FFF;
+            font-size: 5.5rem;
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="screenSaver">
+        <div id="clock"></div>
+    </div>
+    <div>
+        <h2>wait for it!</h2>
+    </div>
+    
+    <script defer type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>

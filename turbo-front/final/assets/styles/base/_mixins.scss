@@ -1,0 +1,6 @@
+@mixin atScreen($size) {
+    @media (min-width: $size){
+        @content;
+    }
+}
+

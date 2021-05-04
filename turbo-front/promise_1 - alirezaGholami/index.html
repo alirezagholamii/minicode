@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: "Ariel", sans-serif;
+            font-size: 18px;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .loading {
+            display: none;
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            opacity: .9;
+            background-color: teal;
+        }
+
+        .loading.show {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading.show p {
+            color: white;
+            font-size: 2rem;
+        }
+
+        table,
+        th,
+        td {
+            /* border: 1px solid black; */
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        td {
+            height: 55px;
+        }
+
+        td img {
+            width: 50px;
+            height: auto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .pagination {
+            display: flex;
+        }
+
+        .pagination p {
+            color: black;
+            cursor: pointer;
+            padding: 8px 16px;
+            background-color: rgb(227, 231, 229);
+        }
+
+        .pagination .active {
+            cursor: unset;
+            background-color: rgb(172, 218, 166);
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="loading">
+        <p>fetching data...</p>
+    </div>
+    <div class="container">
+        <h4>user list</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>firstName</th>
+                    <th>lastName</th>
+                    <th>email</th>
+                    <th>avatar</th>
+                </tr>
+            </thead>
+            <tbody id="userList">
+            </tbody>
+        </table>
+        <div class="pagination">
+        </div>
+    </div>
+
+    <script defer type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>

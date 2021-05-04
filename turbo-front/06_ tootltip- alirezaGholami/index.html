@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice tooltip</title>
+    <style type="text/css">
+        body {
+            font-family: "Ariel", sans-serif;
+            font-size: 18px;
+            margin: 15px;
+            padding: 20px;
+            background-color: rgb(226, 225, 225);
+            color: #285292;
+
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tooltip-parent {
+            position: relative;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: -35px;
+            padding: 8px;
+            border-radius: 8px;
+            display: block;
+            background-color: #285292;
+            color: white;
+            font-size: 14px;
+            font-weight: normal;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        h2 {
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <h2 js-tooltip="this is header!">Learn by Examples</h2>
+        <p><span js-tooltip="***span***">Examples are better than 1000</span>  words. Examples are often easier to understand
+            than text explanations.</p>
+        <p>This tutorial supplements all explanations with clarifying "Try it Yourself" examples.</p>
+        <div>
+            <p>If you try all the examples, you will learn a lot about JavaScript, in a very short time!</p>
+            <a href=" #" js-tooltip="این یک لینک است">JavaScript Examples</a>
+        </div>
+        <div>
+            <p>This tutorial covers every version of JavaScript:</p>
+            <ul>
+                <li>The Original JavaScript ES1 ES2 ES3 (1997-1999)</li>
+                <li>The First Main Revision ES5 (2009)</li>
+                <li>The Second Revision ES6 (2015)</li>
+                <li>The Yearly Additions (2016, 2017, 2018)</li>
+            </ul>
+        </div>
+        <h2 js-tooltip="I have told you!">This header has tooltip too.</h2>
+    </div>
+    <script defer type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>

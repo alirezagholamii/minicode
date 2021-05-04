@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blink</title>
+    <style type="text/css">
+        body {
+            font-family: "Ariel", sans-serif;
+            font-size: 18px;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .display-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            width: 250px;
+            height: 250px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            grid-gap: 8px;
+        }
+
+
+        .grid-container div {
+            border: 2px dashed grey;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <h2>click!</h2>
+    </div>
+    <div class="display-container">
+        <div class="grid-container">
+            <div onclick="blinking(this,1000,200,5000)"></div>
+            <div onclick="blinking(this,1000,200,5000)"></div>
+            <div onclick="blinking(this,1000,200,5000)"></div>
+            <div onclick="blinking(this,500,500,10000)"></div>
+            <div onclick="blinking(this,500,1000,10000)"></div>
+            <div onclick="blinking(this,2000,1000,10000)"></div>
+            <div onclick="blinking(this,300,300,15000)"></div>
+            <div onclick="blinking(this,300,300,15000)"></div>
+            <div onclick="blinking(this,1000,200,15000)"></div>
+        </div>
+    </div>
+    <script defer type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>

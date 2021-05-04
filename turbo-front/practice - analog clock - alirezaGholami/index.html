@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: "Ariel", sans-serif;
+            font-size: 18px;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: rgb(235, 237, 238);
+
+        }
+
+        .clock {
+            width: 340px;
+            height: 550px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .clock__analog {
+            position: relative;
+            width: 270px;
+            height: 270px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotateZ(-90deg);
+
+        }
+        .clock__digital{
+            padding-top: 80px;
+            font-size: 4.5rem;
+            user-select: none;
+        }
+
+        .center{
+            display: block;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: rgb(206, 113, 113);
+            z-index: 10;
+        }
+
+        .hand {
+            position: absolute;
+            display: block;
+            width: 120px;
+            height: 3px;
+            left: 50%;
+            top: 49.6%;
+            transform-origin:0%;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .hand--second {
+            background-color: rgb(206, 113, 113);
+            z-index: 10;
+        }
+        .hand--minute {
+        }
+
+        .hand--hour {
+            width: 90px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="clock">
+        <div class="clock__analog">
+            <span class="center"></span>
+            <span class="hand hand--second"></span>
+            <span class="hand hand--minute"></span>
+            <span class="hand hand--hour"></span>
+        </div>
+        <div class="clock__digital"></div>
+    </div>
+
+    <script defer type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "p7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass assets/styles/main.scss assets/styles/main.css",
+    "watch": "node-sass -w assets/styles/main.scss assets/styles/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
