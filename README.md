@@ -1,6 +1,6 @@
 # MiniCode
 
-MiniCode is personal Note for coding.
+MiniCode is a personal Note for coding.
 
 ## Installation
 
