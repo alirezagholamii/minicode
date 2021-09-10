@@ -69,4 +69,17 @@ function goForward() {
 /*
 const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);
 const compose = (...fns) => (x) => fns.reduceRight((v, f) => f(v), x);
+
+
+reverse(get6Characters(uppercase(getName({ name: 'Buckethead' }))));
+// 'TEKCUB'
+
+pipe(
+  getName,
+  uppercase,
+  get6Characters,
+  reverse
+)({ name: 'Buckethead' });
+// 'TEKCUB'
+
 */
