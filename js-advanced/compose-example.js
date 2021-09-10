@@ -65,3 +65,8 @@ function goBack() {
 function goForward() {
 
 }
+
+/*
+const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);
+const compose = (...fns) => (x) => fns.reduceRight((v, f) => f(v), x);
+*/
